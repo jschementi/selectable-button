@@ -28,23 +28,6 @@ create a selectable button with the following call:
     $('select').selectableButton();
 
 
-<link type="text/css" rel="stylesheet" href="external/bootstrap/css/bootstrap.css">
-<div id="selectable-button-demo" style="padding:20px">
-  <select>
-    <option value="1">Choice 1</option>
-    <option value="2">Choice 2</option>
-    <option value="3">Choice 3</option>
-    <option value="4">Choice 4</option>
-  </select>
-</div>
-<script src="external/jquery-1.8.1.js"></script>
-<script src="external/bootstrap/js/bootstrap.js"></script>
-<script src="selectable-button.js"></script>
-<script>
-  $('#selectable-button-demo > select').selectableButton();
-</script>
-
-
 License
 -------
 
