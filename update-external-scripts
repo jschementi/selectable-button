@@ -1,0 +1,22 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+EXTERNALDIR=$DIR/external
+
+echo 3rd party libraries
+
+rm -Rf $EXTERNALDIR
+mkdir -p $EXTERNALDIR
+pushd $EXTERNALDIR
+
+curl -O http://code.jquery.com/jquery-1.8.1.js
+
+curl -O http://twitter.github.com/bootstrap/assets/bootstrap.zip
+unzip bootstrap.zip
+rm bootstrap.zip
+
+curl -O https://raw.github.com/visionmedia/mocha/master/mocha.css
+
+curl -O https://raw.github.com/visionmedia/mocha/master/mocha.js
+
+curl -O http://chaijs.com/chai.js
+
+popd
