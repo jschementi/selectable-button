@@ -14,7 +14,7 @@ Include `selectable-button.js` on the HTML page after jQuery:
     <script src="jquery.js"></script>
     <script src="selectable-button.js"></script>
 
-and given the follow `<select>` DOM element:
+Given the following `<select>` DOM element:
 
     <select>
       <option>Choice 1</option>
@@ -23,7 +23,7 @@ and given the follow `<select>` DOM element:
       <option>Choice 4</option>
     </select>
 
-create a selectable button with the following call:
+Create a selectable button with the following call:
 
     $('select').selectableButton();
 
