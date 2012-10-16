@@ -7,6 +7,12 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link type="text/css" rel="stylesheet" href="external/bootstrap/css/bootstrap.css">
+    <style type="text/css">
+        header ul {
+            margin: 0;
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,15 +40,29 @@
 
 <p>This plugin generates HTML intended to be styled by <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap's</a> <a href="http://twitter.github.com/bootstrap/components.html#buttonDropdowns">button dropdown menus</a>.</p>
 
+<h2>Demo</h2>
+
+<div id="selectable-button-demo" style="padding-bottom: 10px">
+    <select>
+        <option value="1">Choice 1</option>
+        <option value="2">Choice 2</option>
+        <option value="3">Choice 3</option>
+        <option value="4">Choice 4</option>
+    </select>
+</div>
+
 <h2>Usage</h2>
 
-<p>Include <code>selectable-button.js</code> on the HTML page after jQuery:</p>
+<p>Include <a
+    href="https://raw.github.com/jschementi/selectable-button/master/selectable-button.js">selectable-button.js</a> on the HTML page after jQuery
+(don't forget to include Twitter Bootstrap as well if you aren't going to do
+your own styling):</p>
 
 <pre><code>&lt;script src="jquery.js"&gt;&lt;/script&gt;
 &lt;script src="selectable-button.js"&gt;&lt;/script&gt;
 </code></pre>
 
-<p>and given the follow <code>&lt;select&gt;</code> DOM element:</p>
+<p>Given the following <code>&lt;select&gt;</code> DOM element:</p>
 
 <pre><code>&lt;select&gt;
   &lt;option&gt;Choice 1&lt;/option&gt;
@@ -52,21 +72,22 @@
 &lt;/select&gt;
 </code></pre>
 
-<p>create a selectable button with the following call:</p>
+<p>Create a selectable button with the following call:</p>
 
 <pre><code>$('select').selectableButton();
 </code></pre>
 
-<p></p>
+<h2>Issues</h2>
+<p>Report all issues on <a
+    href="https://github.com/jschementi/selectable-button/issues">GitHub</a>.</p>
 
-<div>
-  Choice 1Choice 2Choice 3Choice 4</div>
+<h2>Tests</h2>
+<p>Run the <a href="test/">tests</a>.</p>
 
-
-  $('#selectable-button-demo &gt; select').selectableButton();
 <h2>License</h2>
 
-<p>See <code>LICENSE.MIT.txt</code>, which is a standard <a href="http://opensource.org/licenses/mit-license.php">MIT license</a>.</p>
+<p>See <a
+    href="https://raw.github.com/jschementi/selectable-button/master/LICENSE.MIT.txt">LICENSE.MIT.txt</a>, which is a standard <a href="http://opensource.org/licenses/mit-license.php">MIT license</a>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/jschementi">jschementi</a></p>
@@ -75,5 +96,11 @@
     </div>
     <script src="javascripts/scale.fix.js"></script>
     
+    <script src="external/jquery-1.8.1.js"></script>
+    <script src="external/bootstrap/js/bootstrap.js"></script>
+    <script src="selectable-button.js"></script>                            
+    <script>
+        $('select').selectableButton();
+    </script>
   </body>
 </html>
