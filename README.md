@@ -1,5 +1,6 @@
 selectable-button.js
 ====================
+[![Build Status](https://secure.travis-ci.org/jschementi/selectable-button.png)](http://travis-ci.org/jschementi/selectable-button)
 
 A [jQuery][jquery] plugin for turning a `<select>` DOM element into a selectable button, where the button's content is the selected `<option>`'s content, and clicking on the button shows a dropdown of all non-selected `<options>`s.
 
