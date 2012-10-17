@@ -3,9 +3,10 @@ var assert = chai.assert;
 function createSelectableButton () {
   $('#fixture').html('<select><option value="a">1</option><option value="b">2</option><option value="c">3</option></select>');
   this.selectEl = $('#fixture > select');
-  this.selectEl.selectableButton();
+  var el = this.selectEl.selectableButton();
 
   assert.ok(this.selectEl.length === 1);
+  assert.equal(el[0], this.selectEl[0]);
 }
 
 function selectOption (el, idx) {

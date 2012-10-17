@@ -55,6 +55,7 @@
       selectEl.change(onSelectChange(el, selectEl, false, true));
       onSelectChange(el, selectEl, false, true).apply(selectEl);
     });
+    return $(this);
   }
 
   $.fn.selectableButton = selectableButton;
