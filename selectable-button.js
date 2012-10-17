@@ -1,6 +1,6 @@
 (function ($) {
 
-  var container = '<div class="btn-group"/>';
+  var container = '<div class="btn-group selectable-button"/>';
 
   var template = '<a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">' +
                  '  <span class="title"></span>' +

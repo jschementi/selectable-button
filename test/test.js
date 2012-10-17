@@ -40,12 +40,16 @@ describe('Creating a selectable button', function () {
   });
   
   it('hides the <select> DOM element', function () {
-    assert.isFalse(this.selectEl.is(':visible'));
+    assert.isFalse(this.selectEl.is(':visible'), "Element should be hidden");
   });
 
   it('sets the button title to the initial selected <option>', function () {
     assert.equal($('a > .title', this.selectEl.parent()).html(), '1');
     assert.equal($('a > .title', this.selectEl.parent()).data('value'), 'a');
+  });
+
+  it('provides a well-known class name', function () {
+    assert.ok(this.selectEl.parent().hasClass('selectable-button'), "Does not have the 'selectable-button' class name");
   });
 
   it('populates the dropdown with the remaining <option> content', function () {
@@ -116,4 +120,3 @@ describe('Creating a selectable button', function () {
   });
 
 });
-
