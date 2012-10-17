@@ -1,0 +1,1 @@
+script: ./update-external-scripts && phantomjs external/mocha-phantomjs/mocha-phantomjs.coffee test/index.html

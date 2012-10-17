@@ -19,4 +19,12 @@ curl -O https://raw.github.com/visionmedia/mocha/master/mocha.js
 
 curl -O http://chaijs.com/chai.js
 
+curl -L -o mocha-phantomjs.zip https://github.com/metaskills/mocha-phantomjs/zipball/master
+unzip mocha-phantomjs.zip
+pushd metaskills-mocha-phantomjs*
+cp -rf lib ../mocha-phantomjs
+popd
+rm -rf metaskills-mocha-phantomjs*
+rm mocha-phantomjs.zip
+
 popd
