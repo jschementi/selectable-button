@@ -14,7 +14,7 @@ function selectOption (el, idx) {
   el[0].selectedIndex = idx;
   el.trigger('change');
   return function () {
-      selectOption(el, prev);
+    selectOption(el, prev);
   };
 }
 
@@ -115,6 +115,17 @@ describe('Creating a selectable button', function () {
         {html: '1', value: 'a'},
         {html: '2', value: 'b'}
       ]);
+    });
+
+    it('triggers the <select> change event', function (done) {
+      this.selectEl.change(function () {
+        assert.ok(true);
+        done();
+      });
+      this.revert();
+      setTimeout(function () {
+        done("change event never fired");
+      }, 100);
     });
 
   });

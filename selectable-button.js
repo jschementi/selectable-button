@@ -17,6 +17,7 @@
 
   function onSelectChange (btnEl, selectEl, btnEvt, selectEvt) {
     return function () {
+      if ($(this).data('ignorechange')) return;
       if (!btnEvt && !selectEvt) return;
       var selectedOption = $('option:selected', this);
       $('.title', btnEl).html(selectedOption.html());
@@ -35,6 +36,9 @@
       if (!btnEvt && !selectEvt) return;
       selectEl.val($(this).data('value'));
       onSelectChange(btnEl, selectEl, btnEvt, false).apply(selectEl);
+      selectEl.data('ignorechange', true);
+      selectEl.trigger('change');
+      selectEl.data('ignorechange', false);
     };   
   }
 
