@@ -34,7 +34,7 @@
   function onButtonChange (btnEl, selectEl, btnEvt, selectEvt) {
     return function () {
       if (!btnEvt && !selectEvt) return;
-      selectEl.val($(this).data('value'));
+      if ($(this).data("value")) selectEl.val($(this).data('value'));
       onSelectChange(btnEl, selectEl, btnEvt, false).apply(selectEl);
       selectEl.data('ignorechange', true);
       selectEl.trigger('change');
